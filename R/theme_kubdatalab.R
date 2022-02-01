@@ -28,7 +28,7 @@
 #'      geom_point(size = 2.5) +
 #'      scale_color_ucph() +
 #'      theme_kubdatalab()
-#' @rdname theme_simpsons
+#' @rdname theme_kubdatalab
 #' @seealso [ggplot2::theme]
 #' @importFrom ggplot2 theme element_text element_rect element_blank element_line
 #' theme_minimal
