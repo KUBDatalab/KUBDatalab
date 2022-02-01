@@ -1,5 +1,5 @@
 #' @title Negated %in%
-#' @description Negated %in%
+#' @description %nin% returns a logical vector indicating if there is a match or not for its left operand
 #' @details details here
 #' @param param 1
 #' @param param 2
