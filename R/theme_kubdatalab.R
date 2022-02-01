@@ -34,7 +34,7 @@
 #' theme_minimal
 #' @importFrom grid unit
 #' @export
-#'
+
 theme_kubdatalab <- function(
   text.font = NULL,
   title.font = NULL,
