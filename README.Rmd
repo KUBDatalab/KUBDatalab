@@ -1,0 +1,18 @@
+---
+
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "70%",
+  fig.align = "center"
+)
+```
+
+# KUB Datalab 0.0.1
+
+Palettes, themes and functions we tend to use a lot. 
