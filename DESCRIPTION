@@ -1,7 +1,7 @@
 Package: KUBDatalab
 Type: Package
 Title: Add palettes, Themes and Utilities from KUB Datalab
-Version: 0.1.0
+Version: 0.0.1
 Author: Who wrote it
 Maintainer: The package maintainer <cbk@kb.dk>
 Description: More about what it does (maybe more than one line)
@@ -10,3 +10,5 @@ License: What license is it under?
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.2
+Depends: 
+    R (>= 2.10)
