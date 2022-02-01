@@ -10,7 +10,7 @@ x \%nin\% table
 \item{param}{2}
 }
 \description{
-Negated %in%
+%nin% returns a logical vector indicating if there is a match or not for its left operand
 }
 \details{
 details here
