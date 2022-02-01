@@ -11,7 +11,7 @@
 #'      geom_point(size = 2.5) +
 #'      scale_color_ucph() +
 #'      theme_kubdatalab()
-#' @rdname nin
+#' @rdname %nin%
 #' @export
 
 `%nin%` <- function (x, table) {
