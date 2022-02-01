@@ -5,7 +5,6 @@
 #' @param param 2
 #' @rdname `%nin%`
 #' @export
-
 `%nin%` <- function (x, table) {
   match(x, table, nomatch = 0L) == 0L
 }
