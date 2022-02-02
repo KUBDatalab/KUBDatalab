@@ -34,7 +34,7 @@ au_palette <- list(
 #' @param n number of colors
 #' @param type discrete or continuous
 #' @param reverse reverse order, Default: FALSE
-#' @rdname ucph_pal
+#' @rdname au_pal
 #' @export
 #' @examples
 #' library(scales)
@@ -85,11 +85,11 @@ au_pal <- function(palette = "sek_klare",
 #'      scale_color_au()
 #' @importFrom ggplot2 discrete_scale scale_color_gradientn
 
-scale_colour_ucph <- function(palette = "dark", n, type = "discrete",
+scale_colour_au <- function(palette = "dark", n, type = "discrete",
                              reverse = FALSE, ...){
   if (type == "discrete") {
     ggplot2::discrete_scale("colour", "au",
-                            ucph_pal(palette = palette, n = n, type = type,
+                            au_pal(palette = palette, n = n, type = type,
                                      reverse = reverse), ...)
   } else { ## needs work...
     ggplot2::scale_colour_gradientn(colours = au_pal(palette = palette, n = n, type = type,
@@ -99,7 +99,7 @@ scale_colour_ucph <- function(palette = "dark", n, type = "discrete",
 
 
 #' @title scale_color_au
-#' @rdname ucph_pal
+#' @rdname au_pal
 #' @export
 #' @examples
 #'
@@ -113,7 +113,7 @@ scale_color_au <- scale_colour_au
 
 
 #' @title scale_fill_au
-#' @rdname ucph_pal
+#' @rdname au_pal
 #' @export
 #' @examples
 #'
