@@ -72,7 +72,7 @@ ucph_pal <- function(palette = "dark",
 }
 
 
-#' @title scale_color_ucph
+#' @title scale_colour_ucph
 #' @rdname ucph_pal
 #' @export
 #' @examples
@@ -81,23 +81,23 @@ ucph_pal <- function(palette = "dark",
 #' ggplot(airquality, aes(x = Day, y = Temp,
 #'      group = as.factor(Month), color = as.factor(Month))) +
 #'      geom_point(size = 2.5) +
-#'      scale_color_ucph()
-#' @importFrom ggplot2 discrete_scale scale_color_gradientn
+#'      scale_colour_ucph()
+#' @importFrom ggplot2 discrete_scale scale_colour_gradientn
 
-scale_color_ucph <- function(palette = "dark", n, type = "discrete",
+scale_colour_ucph <- function(palette = "dark", n, type = "discrete",
                              reverse = FALSE, ...){
   if (type == "discrete") {
-    ggplot2::discrete_scale("color", "ucph",
+    ggplot2::discrete_scale("colour", "ucph",
                             ucph_pal(palette = palette, n = n, type = type,
                                      reverse = reverse), ...)
   } else { ## needs work...
-    ggplot2::scale_color_gradientn(colors = ucph_pal(palette = palette, n = n, type = type,
+    ggplot2::scale_colour_gradientn(colours = ucph_pal(palette = palette, n = n, type = type,
                                                      reverse = reverse)(8))
   }
 }
 
 
-#' @title scale_colour_ucph
+#' @title scale_color_ucph
 #' @rdname ucph_pal
 #' @export
 #' @examples
@@ -105,10 +105,10 @@ scale_color_ucph <- function(palette = "dark", n, type = "discrete",
 #' ggplot(airquality, aes(x = Day, y = Temp,
 #'      group = as.factor(Month), color = as.factor(Month))) +
 #'      geom_point(size = 2.5) +
-#'      scale_colour_ucph()
+#'      scale_color_ucph()
 #' @importFrom ggplot2 discrete_scale scale_color_gradientn
 
-scale_colour_ucph <- scale_color_ucph
+scale_color_ucph <- scale_colour_ucph
 
 
 #' @title scale_fill_ucph
@@ -128,7 +128,7 @@ scale_fill_ucph <- function(n, type = "discrete",
                             uchp_pal(n = n, type = type,
                                          reverse = reverse), ...)
   } else { ## needs work...
-    ggplot2::scale_fill_gradientn(colors = ucph_pal(n = n, type = type,
+    ggplot2::scale_fill_gradientn(colours = ucph_pal(n = n, type = type,
                                                         reverse = reverse)(8))
   }
 }
