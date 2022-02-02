@@ -1,4 +1,4 @@
-ku_palette <- list(
+au_palette <- list(
   ## Blå er den primære AU farve - de øvrige er sekundære klare farver
   sek_klare = c(
     "#003d73", # Blå - Pantone 287 EC
