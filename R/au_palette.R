@@ -107,7 +107,7 @@ scale_colour_ucph <- function(palette = "dark", n, type = "discrete",
 #'      group = as.factor(Month), color = as.factor(Month))) +
 #'      geom_point(size = 2.5) +
 #'      scale_color_au()
-#' @importFrom ggplot2 discrete_scale scale_colour_gradient
+#' @importFrom ggplot2 discrete_scale scale_colour_gradientn
 
 scale_color_au <- scale_colour_au
 
