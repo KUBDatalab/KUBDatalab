@@ -17,7 +17,6 @@ test_that("scale_fill_au works", {
 })
 
 ## Colors are correct ----
-## dark mellem lys
 test_that("au palette dark outputs correct colours", {
   expect_equal(au_pal("sek_klare")(10),
                c(      "#003d73", # Blå - Pantone 287 EC
@@ -33,7 +32,7 @@ test_that("au palette dark outputs correct colours", {
                ))
 })
 
-test_that("ucph palette mellem outputs correct colours",{
+test_that("au palette mellem outputs correct colours",{
   expect_equal(au_pal("sek_dark")(10),
                c(
                  "#002546", # Blå (mørk) - Pantone 289 EC
