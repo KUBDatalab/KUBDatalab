@@ -32,7 +32,7 @@ ruc_palette <- list(
 #' @importFrom glue glue
 #' @importFrom grDevices colorRampPalette
 
-ruc_pal <- function(palette = "dark",
+ruc_pal <- function(palette = "lys",
                      n, type = c("discrete", "continous"),
                      reverse = FALSE){
   ruc <- ruc_palette[[palette]]
@@ -74,14 +74,14 @@ ruc_pal <- function(palette = "dark",
 #'      scale_colour_ruc()
 #' @importFrom ggplot2 discrete_scale scale_colour_gradientn
 
-scale_colour_ruc <- function(n, type = "discrete",
+scale_colour_ruc <- function(n, palette="lys", type = "discrete",
                              reverse = FALSE, ...){
   if (type == "discrete") {
     ggplot2::discrete_scale("colour", "ruc",
-                            ruc_pal(n = n, type = type,
+                            ruc_pal(n = n, palette = palette, type = type,
                                      reverse = reverse), ...)
   } else { ## needs work...
-    ggplot2::scale_colour_gradientn(colours = ruc_pal(n = n, type = type,
+    ggplot2::scale_colour_gradientn(colours = ruc_pal(n = n, palette = palette, type = type,
                                                      reverse = reverse)(8)) # det her 8 - hvorfor, og er det rettet i de andre paletter?
   }
 }
