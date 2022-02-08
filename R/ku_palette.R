@@ -42,10 +42,11 @@ ku_palette <- list(
 #' @importFrom glue glue
 #' @importFrom grDevices colorRampPalette
 
-ucph_pal <- function(palette = "dark",
-                     n, type = c("discrete", "continous"),
+ucph_pal <- function(
+                     n, type = c("discrete", "continuous"),palette = "dark",
                      reverse = FALSE){
-  ucph <- ku_palette[[palette]]
+
+    ucph <- ku_palette[[palette]]
 
   if (reverse == TRUE){
     ucph <- rev(ucph)
@@ -58,18 +59,19 @@ ucph_pal <- function(palette = "dark",
   type <- match.arg(type)
 
   if ( type == "discrete" && n > length(ucph)){
-    stop(glue::glue("Palette does not have {n} colors, maximum is {length(ucph)}!"))
+    stop(glue::glue("Palette does not have {n} colors, maksimum is {length(ucph)}!"))
   }
 
   ucph <- switch(type,
                  continuous = grDevices::colorRampPalette(ucph)(n),
                  discrete = ucph[1:n])
 
-  ucph <- scales::manual_pal(ucph)
+  ucph <- scales::manual_pal(values=ucph)
 
   return(ucph)
 
 }
+
 
 
 #' @title scale_colour_ucph
@@ -92,7 +94,7 @@ scale_colour_ucph <- function(palette = "dark", n, type = "discrete",
                                      reverse = reverse), ...)
   } else { ## needs work...
     ggplot2::scale_colour_gradientn(colours = ucph_pal(palette = palette, n = n, type = type,
-                                                     reverse = reverse)(8))
+                                                     reverse = reverse)(length(ku_palette[[palette]])))
   }
 }
 
@@ -122,14 +124,16 @@ scale_color_ucph <- scale_colour_ucph
 #' @importFrom ggplot2 discrete_scale scale_fill_gradientn
 
 scale_fill_ucph <- function(n, type = "discrete",
+                            palette= "lys",
                                 reverse = FALSE, ...){
   if (type == "discrete") {
     ggplot2::discrete_scale("fill", "ucph",
-                            uchp_pal(n = n, type = type,
+                            ucph_pal(n = n, type = type, palette=palette,
                                          reverse = reverse), ...)
   } else { ## needs work...
-    ggplot2::scale_fill_gradientn(colours = ucph_pal(n = n, type = type,
-                                                        reverse = reverse)(8))
+      ggplot2::scale_fill_gradientn(colours = ucph_pal(palette = palette, n = n, type = type,
+                                                       reverse = reverse)(length(ku_palette[[palette]])))
+
   }
 }
 
