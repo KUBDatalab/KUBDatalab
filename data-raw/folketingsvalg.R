@@ -27,5 +27,8 @@ folketingsvalg <- c(
   "2015-06-18",
   "2019-06-05"
 )
-
- %>% %>% %>% %>% %>% %>%
+folketingsvalg <- lubridate::ymd(folketingsvalg)
+usethis::use_data(folketingsvalg, overwrite = TRUE)
+#' @name folketingsvalg
+#' @export
+"folketingsvalg"
