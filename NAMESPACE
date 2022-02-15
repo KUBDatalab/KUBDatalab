@@ -3,6 +3,8 @@
 export("%nin%")
 export(au_pal)
 export(coursecalendar)
+export(generate_journals)
+export(generate_sciences)
 export(kursuskalender)
 export(ruc_pal)
 export(scale_color_au)
