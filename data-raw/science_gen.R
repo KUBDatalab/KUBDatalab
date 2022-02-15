@@ -5,15 +5,13 @@ library(tidyverse)
 
 # Adjectives and sciences
 adjectives <- read.csv("data-raw/adjectives.csv")
-usethis::use_data(adjectives, adjectives, internal = TRUE)
 
+save(adjectives, file="data-raw/adjectives.rds")
 
 
 sciences <- read.csv("data-raw/sciences.csv")
-usethis::use_data(sciences, sciences, internal = TRUE)
 
-
-
+save(sciences, file="data-raw/sciences.rds")
 
 
 # tidsskriftmønstre:
@@ -33,4 +31,6 @@ journal_patterns <- tribble(~pattern,
   "quarterly reviews of {adjective} {discipline}",
   "{adjective} {discipline} news"
 )
-usethis::use_data(journal_patterns, journal_patterns, internal = TRUE)
+save(journal_patterns, file="data-raw/journal_patterns.rds")
+
+

@@ -24,3 +24,4 @@ generate_journals <- function(n=10, subjects=T){
 }
 
 # nrow(sciences)*nrow(adjectives)*nrow(journal_patterns)
+
