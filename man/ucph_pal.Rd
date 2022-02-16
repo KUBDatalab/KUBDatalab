@@ -8,9 +8,9 @@
 \title{UCPH palette}
 \usage{
 ucph_pal(
-  palette = "dark",
   n,
-  type = c("discrete", "continous"),
+  type = c("discrete", "continuous"),
+  palette = "dark",
   reverse = FALSE
 )
 
@@ -18,7 +18,7 @@ scale_colour_ucph(palette = "dark", n, type = "discrete", reverse = FALSE, ...)
 
 scale_color_ucph(palette = "dark", n, type = "discrete", reverse = FALSE, ...)
 
-scale_fill_ucph(n, type = "discrete", reverse = FALSE, ...)
+scale_fill_ucph(n, type = "discrete", palette = "lys", reverse = FALSE, ...)
 }
 \arguments{
 \item{n}{number of colors}

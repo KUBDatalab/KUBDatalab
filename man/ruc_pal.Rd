@@ -7,16 +7,11 @@
 \alias{scale_fill_ruc}
 \title{RUC palette}
 \usage{
-ruc_pal(
-  palette = "dark",
-  n,
-  type = c("discrete", "continous"),
-  reverse = FALSE
-)
+ruc_pal(palette = "lys", n, type = c("discrete", "continous"), reverse = FALSE)
 
-scale_colour_ruc(n, type = "discrete", reverse = FALSE, ...)
+scale_colour_ruc(n, palette = "lys", type = "discrete", reverse = FALSE, ...)
 
-scale_color_ruc(n, type = "discrete", reverse = FALSE, ...)
+scale_color_ruc(n, palette = "lys", type = "discrete", reverse = FALSE, ...)
 
 scale_fill_ruc(n, type = "discrete", reverse = FALSE, ...)
 }
