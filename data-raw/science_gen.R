@@ -32,5 +32,3 @@ journal_patterns <- tribble(~pattern,
   "{adjective} {discipline} news"
 )
 save(journal_patterns, file="data-raw/journal_patterns.rds")
-
-
