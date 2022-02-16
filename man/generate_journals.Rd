@@ -15,7 +15,16 @@ generate_journals(n = 10, subjects = T)
 generate_journals returns a tibble with fictional names of scientific journals
 }
 \details{
-details here - vi skal huske at kreditere lloyd
+Based on an idea (and data collected) by Lloyd James a table of
+scientific adjectives is combined with a table of scientific disciplines. These
+are glued together with common patterns of scientific journal titles.
+
+Currently there are no checks for duplicated journal names, and the upper
+limit of journal names that can be returned is 698.
+
+The assignment of subjects to the journals are controlled by the adjectives,
+and any instances of internal consistency between adjective, discipline and
+subject are purely coincidental.
 }
 \references{
 L. James, ESG, (2021), GitHub repository, https://github.com/ltjames/ESG
