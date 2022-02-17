@@ -181,8 +181,6 @@ Astronomy,astrometrized
 Astronomy,superluminous
 Astronomy,Callistan
 Astronomy,interbinary
-Astronomy,Lα
-Astronomy,Ly-α
 Astronomy,Saturnicentric
 Astronomy,jovicentric
 Astronomy,ultrazodiacal
@@ -349,7 +347,6 @@ Biology,apodal
 Biology,supracellular
 Biology,taligrade
 Biology,refractory
-Biology,f.
 Biology,heterological
 Biology,cosmopolite
 Biology,upstream
@@ -520,7 +517,6 @@ Biology,cytonuclear
 Biology,neutrophil
 Biology,monophyletic
 Biology,sagittiform
-Biology,aff.
 Biology,transmembrane
 Biology,pseudocoelomate
 Biology,abapical
@@ -758,7 +754,6 @@ Biology,neutralophilic
 Biology,bicarinate
 Biology,postmitochondrial
 Biology,antinucleating
-Biology,claviform
 Biology,claviform
 Biology,biflagellate
 Biology,oxytactic
@@ -1716,7 +1711,6 @@ Chemistry,liquid
 Chemistry,syn
 Chemistry,igasuric
 Chemistry,additive
-Chemistry,w/o
 Chemistry,homologous
 Chemistry,lunar
 Chemistry,electronic
@@ -1984,7 +1978,6 @@ Chemistry,antiaromatic
 Chemistry,coordinated
 Chemistry,cerous
 Chemistry,ceric
-Chemistry,ceric
 Chemistry,diterpenoid
 Chemistry,hemiterpenoid
 Chemistry,tetraterpenoid
@@ -2157,7 +2150,6 @@ Chemistry,non-stoichiometric
 Chemistry,hydropathic
 Chemistry,allotropical
 Chemistry,isokinetic
-Chemistry,A/B
 Chemistry,equimolecular
 Chemistry,equimolar
 Chemistry,voltammetric
@@ -2437,7 +2429,6 @@ Chemistry,bilayerlike
 Chemistry,monolayerlike
 Chemistry,isocrystalline
 Chemistry,nitrose
-Chemistry,w/w
 Chemistry,nematogenic
 Chemistry,rotameric
 Chemistry,monosubstituted
@@ -2537,8 +2528,6 @@ Chemistry,subvalent
 Chemistry,donatable
 Chemistry,bimesogenic
 Chemistry,one-handed
-Chemistry,Lα
-Chemistry,Ly-α
 Chemistry,multiexchange
 Chemistry,eutactic
 Chemistry,xylidic
@@ -2751,7 +2740,6 @@ Chemistry,phosphocalcic
 Chemistry,nonylic
 Chemistry,salited
 Chemistry,octatomic
-Chemistry,Kekuléan
 Chemistry,allochromatic
 Chemistry,disodic
 Chemistry,trimethylsilylated
@@ -3328,7 +3316,6 @@ Mathematics,octic
 Mathematics,positive
 Mathematics,impossible
 Mathematics,axiomatic
-Mathematics,adj.
 Mathematics,unitary
 Mathematics,integral
 Mathematics,normal
@@ -3679,7 +3666,6 @@ Mathematics,bimaximal
 Mathematics,superconformal
 Mathematics,vectorlike
 Mathematics,linearizable
-Mathematics,+ve
 Mathematics,capacitated
 Mathematics,quartal
 Mathematics,matricial
@@ -4051,7 +4037,6 @@ Mathematics,nonrepeating
 Mathematics,epimoric
 Mathematics,biautomatic
 Mathematics,quasibarrelled
-Mathematics,f.g.
 Mathematics,one-to-many
 Mathematics,many-to-one
 Mathematics,many-to-many
@@ -4864,7 +4849,6 @@ Physics,spectrotemporal
 Physics,phlogistic
 Physics,technicolor
 Physics,superatomic
-Physics,superatomic
 Physics,quarkonic
 Physics,leptonic
 Physics,undercooled
@@ -5184,8 +5168,6 @@ Physics,ultraviscous
 Physics,magnetoresistant
 Physics,flexomagnetic
 Physics,cymatic
-Physics,Lα
-Physics,Ly-α
 Physics,unswitched
 Physics,sextate
 Physics,phasematching

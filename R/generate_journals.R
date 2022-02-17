@@ -1,6 +1,16 @@
 #' @title generate_journals()
 #' @description generate_journals returns a tibble with fictional names of scientific journals
-#' @details details here - vi skal huske at kreditere lloyd
+#' @details Based on an idea (and data collected) by Lloyd James a table of
+#' scientific adjectives is combined with a table of scientific disciplines. These
+#' are glued together with common patterns of scientific journal titles.
+#'
+#' Currently there are no checks for duplicated journal names, and the upper
+#' limit of journal names that can be returned is 698.
+#'
+#' The assignment of subjects to the journals are controlled by the adjectives,
+#' and any instances of internal consistency between adjective, discipline and
+#' subject are purely coincidental.
+#'
 #' @param n number of journals returned
 #' @param subjects logical value indicating wether the subject of the journal should be returned
 #' @references L. James, ESG, (2021), GitHub repository, https://github.com/ltjames/ESG
@@ -25,3 +35,4 @@ generate_journals <- function(n=10, subjects=T){
 
 # nrow(sciences)*nrow(adjectives)*nrow(journal_patterns)
 
+nrow(sciences)

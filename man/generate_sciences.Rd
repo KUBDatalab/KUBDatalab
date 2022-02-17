@@ -4,7 +4,7 @@
 \alias{generate_sciences}
 \title{generate_sciences()}
 \usage{
-generate_sciences(n = 10, subjects = T)
+generate_sciences(n = 10L, subjects = T)
 }
 \arguments{
 \item{n}{number of scientific disciplines returned}
