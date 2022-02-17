@@ -16,7 +16,7 @@ save(sciences, file="data-raw/sciences.rds")
 
 # tidsskriftmønstre:
 
-journal_patterns <- tribble(~pattern,
+journal_patterns <- data.frame(pattern=c(
   "the {adjective} {discipline} journal",
   "The journal of {adjective} {discipline}",
   "{adjective} {discipline} magazine",
@@ -29,6 +29,6 @@ journal_patterns <- tribble(~pattern,
   "{adjective} {discipline} quarterly",
   "{adjective} {discipline} studies",
   "quarterly reviews of {adjective} {discipline}",
-  "{adjective} {discipline} news"
+  "{adjective} {discipline} news")
 )
 save(journal_patterns, file="data-raw/journal_patterns.rds")
