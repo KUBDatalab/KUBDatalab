@@ -8,8 +8,8 @@ test_that("generate_sciences error given if larger than maximum value are suppli
 })
 
 test_that("generate_sciences returns unique results",{
-  expect_equal(nrow(distinct(generate_sciences(100000, subjects = F))), 100000)
-  expect_equal(nrow(distinct(generate_sciences(100000, subjects = T))), 100000)
+  expect_equal(nrow(distinct(generate_sciences(1000000, subjects = F))), 1000000)
+  expect_equal(nrow(distinct(generate_sciences(1000000, subjects = T))), 1000000)
 })
 
 test_that("generate_sciences returns tibble", {
@@ -28,6 +28,4 @@ test_that("generate_sciences returns correct dimensions", {
   expect_equal(dim(generate_sciences(10, T)), c(10,2))
   expect_equal(dim(generate_sciences(10, F)), c(10,1))
 })
-
-
 
