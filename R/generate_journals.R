@@ -18,10 +18,27 @@
 #' @export
 
 generate_journals <- function(n=10, subjects=T){
-  resultat <- cbind(slice_sample(adjectives, n=n),
-                slice_sample(sciences, n=n),
-                slice_sample(journal_patterns, n=n, replace = T)
-  ) %>%
+  # testing input
+  if (is.numeric(n) == FALSE) {
+    stop(sprintf("Error - n must be a number between 1 and %s", nrow(sciences)*nrow(adjectives)*nrow(journal_patterns)))
+  }
+  if (!between(n, 1, nrow(sciences)*nrow(adjectives))){
+    stop(sprintf("Error - n must be an number between 1 and %s", nrow(sciences)*nrow(adjectives)*nrow(journal_patterns)))
+  }
+  # generate array indeces for an array with dimensions nrow(sciences) x nrow(adjectives)
+  # A sample of integers between 1 and nrow(sciences)*nrow(adjectives) is taken.
+  # Each integer points to one cell in the array.
+  arr <- arrayInd(sample(nrow(sciences)*nrow(adjectives), n), c(nrow(sciences),nrow(adjectives), nrow(journal_patterns)))
+
+  # The array indeces are used to subset rows from adjective, sciences and
+  # journal patterns. - they are collected to a tibble, adjective and
+  # discipline glued into the journal pattern
+  # The journal title is returned in title case
+
+  resultat <- tibble(adjective = adjectives[arr[,2],2],
+                     subject = adjectives[arr[,2],1],
+                     discipline = sciences[arr[,1],],
+                     pattern = journal_patterns[arr[,3],]) %>%
     rowwise() %>%
     mutate(resultat = glue::glue(pattern)) %>%
     ungroup() %>%
@@ -32,7 +49,3 @@ generate_journals <- function(n=10, subjects=T){
   }
   return(resultat)
 }
-
-# nrow(sciences)*nrow(adjectives)*nrow(journal_patterns)
-
-nrow(sciences)
