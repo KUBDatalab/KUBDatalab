@@ -56,13 +56,13 @@ kb_pal <- function(palette = "prim_klare",
 
   type <- match.arg(type)
 
-  if ( type == "discrete" && n > length(au)){
+  if ( type == "discrete" && n > length(kb)){
     stop(glue::glue("Palette does not have {n} colors, maximum is {length(kb)}!"))
   }
 
   kb <- switch(type,
                  continuous = grDevices::colorRampPalette(kb)(n),
-                 discrete = au[1:n])
+                 discrete = kb[1:n])
 
   kb <- scales::manual_pal(kb)
 
@@ -87,7 +87,7 @@ scale_colour_kb <- function(palette = "prim_klare", n, type = "discrete",
                              reverse = FALSE, ...){
   if (type == "discrete") {
     ggplot2::discrete_scale("colour", "kb",
-                            au_pal(palette = palette, n = n, type = type,
+                            kb_pal(palette = palette, n = n, type = type,
                                      reverse = reverse), ...)
   } else { ## needs work...
     ggplot2::scale_colour_gradientn(colours = kb_pal(palette = palette, n = n, type = type,
@@ -124,7 +124,7 @@ scale_fill_kb <- function(n, type = "discrete",
                                 reverse = FALSE, ...){
   if (type == "discrete") {
     ggplot2::discrete_scale("fill", "kb",
-                            au_pal(n = n, type = type,
+                            kb_pal(n = n, type = type,
                                          reverse = reverse), ...)
   } else { ## needs work...
     ggplot2::scale_fill_gradientn(colours = kb_pal(n = n, type = type,

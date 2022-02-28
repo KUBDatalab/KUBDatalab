@@ -42,8 +42,8 @@ ku_palette <- list(
 #' @importFrom glue glue
 #' @importFrom grDevices colorRampPalette
 
-ucph_pal <- function(
-                     n, type = c("discrete", "continuous"),palette = "dark",
+ucph_pal <- function(palette = "dark",
+                     n, type = c("discrete", "continuous"),
                      reverse = FALSE){
 
     ucph <- ku_palette[[palette]]

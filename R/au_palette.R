@@ -66,7 +66,7 @@ au_pal <- function(palette = "sek_klare",
                  continuous = grDevices::colorRampPalette(au)(n),
                  discrete = au[1:n])
 
-  au <- scales::manual_pal(au)
+  au <- scales::manual_pal(values=au)
 
   return(au)
 
@@ -85,7 +85,7 @@ au_pal <- function(palette = "sek_klare",
 #'      scale_color_au()
 #' @importFrom ggplot2 discrete_scale scale_color_gradientn
 
-scale_colour_au <- function(palette = "dark", n, type = "discrete",
+scale_colour_au <- function(palette = "sek_dark", n, type = "discrete",
                              reverse = FALSE, ...){
   if (type == "discrete") {
     ggplot2::discrete_scale("colour", "au",
@@ -93,7 +93,7 @@ scale_colour_au <- function(palette = "dark", n, type = "discrete",
                                      reverse = reverse), ...)
   } else { ## needs work...
     ggplot2::scale_colour_gradientn(colours = au_pal(palette = palette, n = n, type = type,
-                                                     reverse = reverse)(8))
+                                                     reverse = reverse)(length(au_palette[[palette]])))
   }
 }
 
