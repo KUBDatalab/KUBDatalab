@@ -14,9 +14,21 @@ au_pal(
   reverse = FALSE
 )
 
-scale_colour_au(palette = "dark", n, type = "discrete", reverse = FALSE, ...)
+scale_colour_au(
+  palette = "sek_dark",
+  n,
+  type = "discrete",
+  reverse = FALSE,
+  ...
+)
 
-scale_color_au(palette = "dark", n, type = "discrete", reverse = FALSE, ...)
+scale_color_au(
+  palette = "sek_dark",
+  n,
+  type = "discrete",
+  reverse = FALSE,
+  ...
+)
 
 scale_fill_au(n, type = "discrete", reverse = FALSE, ...)
 }

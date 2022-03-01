@@ -8,9 +8,9 @@
 \title{UCPH palette}
 \usage{
 ucph_pal(
+  palette = "dark",
   n,
   type = c("discrete", "continuous"),
-  palette = "dark",
   reverse = FALSE
 )
 

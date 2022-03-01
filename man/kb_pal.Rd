@@ -8,27 +8,21 @@
 \title{KB palette}
 \usage{
 kb_pal(
-  palette = "prim_klare",
+  palette = "komplet",
   n,
   type = c("discrete", "continous"),
   reverse = FALSE
 )
 
 scale_colour_kb(
-  palette = "prim_klare",
+  palette = "komplet",
   n,
   type = "discrete",
   reverse = FALSE,
   ...
 )
 
-scale_color_kb(
-  palette = "prim_klare",
-  n,
-  type = "discrete",
-  reverse = FALSE,
-  ...
-)
+scale_color_kb(palette = "komplet", n, type = "discrete", reverse = FALSE, ...)
 
 scale_fill_kb(n, type = "discrete", reverse = FALSE, ...)
 }
@@ -107,7 +101,7 @@ KB palette of colours used by the University of Århus
 }
 \examples{
 library(scales)
-show_col(kb_pal()(5))
+show_col(kb_pal()(8))
 
 library(ggplot2)
 ggplot(airquality, aes(x = Day, y = Temp,

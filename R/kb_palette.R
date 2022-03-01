@@ -1,14 +1,27 @@
 kb_palette <- list(
-  ## Blå er den primære kb farve - de øvrige er sekundære klare farver
-  prim_klare = c(
-    "#002e70", # Blå - dark blue 100 - primary
-    "#323232", # Dark gray
-    "#B30018", # red 100 - danger
-    "#F391B8", # Pink100
-    "#F4B664", # Orange
-    "#FEEC89", # Yellow 100
-    "#96EcFD", # Sky bliue 100
-    "#26D466" # green 100
+  komplet = c(
+    "#002E70", # DARK BLUE 100
+    "#F2F4F8", # DARK BLUE 05
+    "#171717", # ALMOST BLACK 100
+    "#757575", # ALMOST BLACK 50
+    "#F5F5F5", # ALMOST BLACK 05
+    "#323232", # DARK GRAY
+    "#D6D6D6", # LIGHT GRAY
+    "#B30018", # RED 100
+    "#F391B8", # PINK 100
+    "#F9C8DC", # PINK 50
+    "#FEEFF5", # PINK 15
+    "#F4B664", # ORANGE
+    "#FEEC89", # YELLOW 100
+    "#FFF6C4", # YELLOW 50
+    "#FFFDEE", # YELLOW 15
+    "#96E2FD", # SKY BLUE 100
+    "#CAF0FE", # SKY BLUE 50
+    "#F0FBFF", # SKY BLUE 15
+    "#26D466", # GREEN 100
+    "#8AE3DB", # TEAL 100
+    "#C4F1ED", # TEAL 50
+    "#EEFBFA" # TEAL 15
   ),
   sek_dark = c(
     "#002546", # Blå (mørk) - Pantone 289 EC
@@ -36,12 +49,12 @@ kb_palette <- list(
 #' @export
 #' @examples
 #' library(scales)
-#' show_col(kb_pal()(5))
+#' show_col(kb_pal()(8))
 #' @importFrom scales manual_pal
 #' @importFrom glue glue
 #' @importFrom grDevices colorRampPalette
 
-kb_pal <- function(palette = "prim_klare",
+kb_pal <- function(palette = "komplet",
                      n, type = c("discrete", "continous"),
                      reverse = FALSE){
   kb <- kb_palette[[palette]]
@@ -83,7 +96,7 @@ kb_pal <- function(palette = "prim_klare",
 #'      scale_color_kb()
 #' @importFrom ggplot2 discrete_scale scale_color_gradientn
 
-scale_colour_kb <- function(palette = "prim_klare", n, type = "discrete",
+scale_colour_kb <- function(palette = "komplet", n, type = "discrete",
                              reverse = FALSE, ...){
   if (type == "discrete") {
     ggplot2::discrete_scale("colour", "kb",
@@ -91,7 +104,7 @@ scale_colour_kb <- function(palette = "prim_klare", n, type = "discrete",
                                      reverse = reverse), ...)
   } else { ## needs work...
     ggplot2::scale_colour_gradientn(colours = kb_pal(palette = palette, n = n, type = type,
-                                                     reverse = reverse)(8))
+                                                     reverse = reverse)(length(kb_palette[[palette]])))
   }
 }
 
@@ -128,7 +141,7 @@ scale_fill_kb <- function(n, type = "discrete",
                                          reverse = reverse), ...)
   } else { ## needs work...
     ggplot2::scale_fill_gradientn(colours = kb_pal(n = n, type = type,
-                                                        reverse = reverse)(8))
+                                                        reverse = reverse)(length(ku_palette[[palette]])))
   }
 }
 
