@@ -1,3 +1,4 @@
+#' @name generate_journals
 #' @title generate_journals()
 #' @description generate_journals returns a tibble with fictional names of scientific journals
 #' @details Based on an idea (and data collected) by Lloyd James a table of
@@ -15,9 +16,19 @@
 #' @param subjects logical value indicating wether the subject of the journal should be returned
 #' @references L. James, ESG, (2021), GitHub repository, https://github.com/ltjames/ESG
 #' @rdname generate_journals
+#'
+#' @importFrom dplyr  %>%
+#' @importFrom dplyr mutate
+#' @importFrom dplyr between
+#' @importFrom dplyr rowwise
+#' @importFrom rlang .data
+#' @importFrom tibble tibble
+#' @importFrom glue glue
+#' @importFrom stringr str_to_title
 #' @export
-
+utils::globalVariables(".")
 generate_journals <- function(n=10, subjects=T){
+
   # testing input
   if (is.numeric(n) == FALSE) {
     stop(sprintf("Error - n must be a number between 1 and %s", nrow(sciences)*nrow(adjectives)*nrow(journal_patterns)))
@@ -40,12 +51,12 @@ generate_journals <- function(n=10, subjects=T){
                      discipline = sciences[arr[,1],],
                      pattern = journal_patterns[arr[,3],]) %>%
     rowwise() %>%
-    mutate(resultat = glue::glue(pattern)) %>%
-    ungroup() %>%
-    mutate(journal_title = str_to_title(resultat)) %>%
-    select(journal_title, subject)
+    mutate(resultat = glue(.$pattern)) %>%
+    dplyr::ungroup() %>%
+    mutate(journal_title = stringr::str_to_title(resultat)) %>%
+    dplyr::select(.$journal_title, .$subject)
   if(!subjects){
-    resultat <- select(resultat, journal_title)
+    resultat <- dplyr::select(.$resultat, .$journal_title)
   }
   return(resultat)
 }
