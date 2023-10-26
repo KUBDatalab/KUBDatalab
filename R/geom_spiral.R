@@ -1,7 +1,11 @@
 #' @title geom_spiral
 #' @description geom_spiral laver et spiral plot.
 #' @details details here
-#' @param param 1
+#' @param mapping beskrivelse
+#' @param data beskrivelse
+#' @param geom skal nok væk
+#' @param na.rm skal nok væk
+#' @param show.legend viser legend
 #' @rdname geom_spiral
 #' @importFrom ggplot2 layer
 #' @export

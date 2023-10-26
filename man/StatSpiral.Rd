@@ -10,9 +10,6 @@ An object of class \code{StatSpiral} (inherits from \code{Stat}, \code{ggproto},
 \usage{
 StatSpiral
 }
-\arguments{
-\item{param}{1}
-}
 \description{
 StatSpiral returnerer det vi skal bruge for at lave geom_spiral
 }

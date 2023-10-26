@@ -17,7 +17,15 @@ geom_spiral(
 )
 }
 \arguments{
-\item{param}{1}
+\item{mapping}{beskrivelse}
+
+\item{data}{beskrivelse}
+
+\item{geom}{skal nok væk}
+
+\item{na.rm}{skal nok væk}
+
+\item{show.legend}{viser legend}
 }
 \description{
 geom_spiral laver et spiral plot.
