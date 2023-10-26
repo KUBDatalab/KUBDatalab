@@ -1,7 +1,6 @@
 #' @title StatSpiral
 #' @description StatSpiral returnerer det vi skal bruge for at lave geom_spiral
 #' @details details here
-#' @param param 1
 #' @rdname StatSpiral
 #' @importFrom ggplot2 ggproto
 #' @importFrom ggplot2 Stat
