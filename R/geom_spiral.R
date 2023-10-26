@@ -3,6 +3,7 @@
 #' @details details here
 #' @param param 1
 #' @rdname geom_spiral
+#' @importFrom ggplot2 layer
 #' @export
 geom_spiral <- function(mapping = NULL, data = NULL, geom = "path",
 position = "identity", na.rm = FALSE, show.legend = NA,
