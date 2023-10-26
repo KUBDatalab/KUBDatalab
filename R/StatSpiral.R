@@ -3,11 +3,16 @@
 #' @details details here
 #' @param param 1
 #' @rdname StatSpiral
+#' @importFrom ggplot2 ggproto
+#' @importFrom ggplot2 Stat
 #' @export
-StatSpiral <- ggproto("StatSpiral", Stat,
+StatSpiral <- ggplot2::ggproto("StatSpiral",
+                               `_inherit` = ggplot2::Stat,
                       required_aes = c("x", "group"),
 
                       compute_group = function(data, scales, n = 12) {
+                        # Check for NULL data
+                        if(is.null(data)){stop("Data cannot be NULL.")}
                         a <- 1
                         b <- 1
                         theta <- seq(0, n*(2*pi), length.out=1300)
