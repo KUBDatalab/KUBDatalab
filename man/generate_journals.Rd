@@ -3,9 +3,6 @@
 \name{generate_journals}
 \alias{generate_journals}
 \title{generate_journals()}
-\usage{
-generate_journals(n = 10, subjects = T)
-}
 \arguments{
 \item{n}{number of journals returned}
 

@@ -54,7 +54,7 @@ theme_kubdatalab <- function(
   panel.grid.major.color = "black",
   panel.grid.minor.color = "grey",
   legend.title.color = "black",
-  legend.text.color = "black",
+  legend.text.color = "#ffffff",
   legend.position = "bottom",
   ticks = FALSE){
   kub_datalab <- ggplot2::theme_minimal() +

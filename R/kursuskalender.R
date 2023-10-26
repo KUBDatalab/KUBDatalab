@@ -2,6 +2,7 @@
 #' @description kursuskalender() opens the KUB Datalab course calendar in a browser
 #' @details details here
 #' @rdname kursuskalender
+#' @importFrom utils browseURL
 #' @export
 
 kursuskalender <- function(){
@@ -9,7 +10,7 @@ kursuskalender <- function(){
   browseURL(url)
 }
 
-#' @title scale_colour_ucph
+#' @title Course calendar
 #' @rdname kursuskalender
 #' @export
 coursecalendar <- kursuskalender
