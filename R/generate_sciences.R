@@ -37,7 +37,7 @@ generate_sciences <- function(n=10L, subjects=T){
 
   # If subjects = F, scientific subject is removed
   if(!subjects){
-    resultat <- dplyr::select(resultat, discipline)
+    resultat <- dplyr::select("resultat", "discipline")
   }
   return(resultat)
 }
