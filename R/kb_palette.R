@@ -125,6 +125,7 @@ scale_color_kb <- scale_colour_kb
 
 #' @title scale_fill_kb
 #' @rdname kb_pal
+#' @param palette eksempelvis komplet
 #' @export
 #' @examples
 #'
@@ -134,6 +135,7 @@ scale_color_kb <- scale_colour_kb
 #' @importFrom ggplot2 discrete_scale scale_fill_gradientn
 
 scale_fill_kb <- function(n, type = "discrete",
+                          palette = "komplet",
                                 reverse = FALSE, ...){
   if (type == "discrete") {
     ggplot2::discrete_scale("fill", "kb",
