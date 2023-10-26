@@ -26,7 +26,7 @@ test_that("ruc palette outputs correct colours", {
                  "#ef95cf", # Lys rød - Pantone 223C
                  "#f6eb61"  # Lys gul - Pantone 100C
                ))
-  expect_equal(ruc_pal("dard")(5),
+  expect_equal(ruc_pal("dark")(5),
                c(
                  "#425563", # Mørk grå - Pantone 7545C
                  "#00685e", # Støvet grøn - Pantone 329C
