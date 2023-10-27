@@ -23,6 +23,7 @@ ruc_palette <- list(
 #' @param n number of colors
 #' @param type discrete or continuous
 #' @param reverse reverse order, Default: FALSE
+#' @param palette default lys
 #' @rdname ruc_pal
 #' @export
 #' @examples

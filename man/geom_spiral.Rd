@@ -8,10 +8,8 @@ geom_spiral(
   mapping = NULL,
   data = NULL,
   geom = "path",
-  position = "identity",
   na.rm = FALSE,
   show.legend = NA,
-  inherit.aes = TRUE,
   n = 12,
   ...
 )
@@ -26,6 +24,10 @@ geom_spiral(
 \item{na.rm}{skal nok væk}
 
 \item{show.legend}{viser legend}
+
+\item{n}{Antal omdrejninger på spiralen.}
+
+\item{...}{de der ekstra ting der kan sendes med}
 }
 \description{
 geom_spiral laver et spiral plot.
