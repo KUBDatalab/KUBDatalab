@@ -33,6 +33,7 @@ ku_palette <- list(
 #' @param n number of colors
 #' @param type discrete or continuous
 #' @param reverse reverse order, Default: FALSE
+#' @param palette default palette dark
 #' @rdname ucph_pal
 #' @export
 #' @examples
