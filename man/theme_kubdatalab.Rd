@@ -18,11 +18,11 @@ theme_kubdatalab(
   title.color = "#901a1E",
   subtitle.color = "#c73028",
   text.color = "#901a1E",
-  axis.title.color = "black",
+  axis.title.color = "#000000",
   axis.text.color = "black",
   panel.grid.major.color = "black",
   panel.grid.minor.color = "grey",
-  legend.title.color = "black",
+  legend.title.color = "#000000",
   legend.text.color = "#ffffff",
   legend.position = "bottom",
   ticks = FALSE
@@ -58,6 +58,10 @@ theme_kubdatalab(
 \item{axis.title.color}{axis title color, Default: "#fee8c8"}
 
 \item{axis.text.color}{axis text color, Default: "#fee8c8"}
+
+\item{panel.grid.major.color}{en farveting}
+
+\item{panel.grid.minor.color}{en anden farveting}
 
 \item{legend.title.color}{legend title color, Default: "#ffffff"}
 
