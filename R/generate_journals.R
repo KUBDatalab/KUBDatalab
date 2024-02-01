@@ -17,10 +17,7 @@
 #' @references L. James, ESG, (2021), GitHub repository, https://github.com/ltjames/ESG
 #' @rdname generate_journals
 #'
-#' @importFrom dplyr  %>%
-#' @importFrom dplyr mutate
-#' @importFrom dplyr between
-#' @importFrom dplyr rowwise
+#' @import dplyr
 #' @importFrom rlang .data
 #' @importFrom tibble tibble
 #' @importFrom glue glue
@@ -51,12 +48,12 @@ generate_journals <- function(n=10, subjects=T){
                      discipline = sciences[arr[,1],],
                      pattern = journal_patterns[arr[,3],]) %>%
     rowwise() %>%
-    mutate(resultat = glue(.$pattern)) %>%
+    mutate(resultat = glue(pattern)) %>%
     dplyr::ungroup() %>%
     mutate(journal_title = stringr::str_to_title(resultat)) %>%
-    dplyr::select(.$journal_title, .$subject)
+    dplyr::select(journal_title, subject)
   if(!subjects){
-    resultat <- dplyr::select(.$resultat, .$journal_title)
+    resultat <- dplyr::select(resultat, journal_title)
   }
   return(resultat)
 }

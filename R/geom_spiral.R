@@ -9,7 +9,8 @@
 #' @param n Antal omdrejninger på spiralen.
 #' @param ... de der ekstra ting der kan sendes med
 #' @rdname geom_spiral
-#' @importFrom ggplot2 layer
+#' @importFrom ggplot2 facet_wrap
+#' @import ggplot2
 #' @export
 geom_spiral <- function(mapping = NULL, data = NULL, geom = "path",
  na.rm = FALSE, show.legend = NA,

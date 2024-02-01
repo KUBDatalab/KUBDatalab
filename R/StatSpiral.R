@@ -2,8 +2,7 @@
 #' @description StatSpiral returnerer det vi skal bruge for at lave geom_spiral
 #' @details details here
 #' @rdname StatSpiral
-#' @importFrom ggplot2 ggproto
-#' @importFrom ggplot2 Stat
+#' @import ggplot2
 #' @export
 StatSpiral <- ggplot2::ggproto("StatSpiral",
                                `_inherit` = ggplot2::Stat,
