@@ -39,6 +39,7 @@ au_palette <- list(
 #' @examples
 #' library(scales)
 #' show_col(au_pal()(5))
+#' @param palette eksempelvis sek_klare
 #' @importFrom scales manual_pal
 #' @importFrom glue glue
 #' @importFrom grDevices colorRampPalette

@@ -20,6 +20,8 @@
 #' @param legend.text.color legend text color, Default: "#ffffff"
 #' @param legend.position legend position, Default: "bottom"
 #' @param ticks add axis ticks, Default: FALSE
+#' @param panel.grid.major.color en farveting
+#' @param panel.grid.minor.color en anden farveting
 #' @examples
 #' library(ggplot2)
 #'
@@ -49,11 +51,11 @@ theme_kubdatalab <- function(
   title.color = "#901a1E",
   subtitle.color = "#c73028",
   text.color = "#901a1E",
-  axis.title.color = "black",
+  axis.title.color = "#000000",
   axis.text.color = "black",
   panel.grid.major.color = "black",
   panel.grid.minor.color = "grey",
-  legend.title.color = "black",
+  legend.title.color = "#000000",
   legend.text.color = "#ffffff",
   legend.position = "bottom",
   ticks = FALSE){

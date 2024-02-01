@@ -23,9 +23,9 @@ test_that("theme_kubdatalab works", {
   expect_equal(thm$plot.title$colour, "#FFD235")
   expect_equal(thm$plot.subtitle$colour, "#fee8c8")
   expect_equal(thm$axis.text$colour, "#fee8c8")
-  expect_equal(thm$axis.title$colour, "#fee8c8")
-  expect_equal(thm$legend.text$colour, "#ffffff")
-  expect_equal(thm$legend.title$colour, "#ffffff")
+  expect_equal(thm$axis.title$colour, "#000000")
+  expect_equal(thm$legend.text$colour, "#000000")
+  expect_equal(thm$legend.title$colour, "#000000")
   expect_equal(thm$legend.position, "bottom")
 
   ## ticks == TRUE

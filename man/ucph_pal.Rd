@@ -21,6 +21,8 @@ scale_color_ucph(palette = "dark", n, type = "discrete", reverse = FALSE, ...)
 scale_fill_ucph(n, type = "discrete", palette = "lys", reverse = FALSE, ...)
 }
 \arguments{
+\item{palette}{default palette dark}
+
 \item{n}{number of colors}
 
 \item{type}{discrete or continuous}
@@ -33,9 +35,6 @@ scale_fill_ucph(n, type = "discrete", palette = "lys", reverse = FALSE, ...)
     \item{\code{aesthetics}}{The names of the aesthetics that this scale works with.}
     \item{\code{scale_name}}{The name of the scale that should be used for error messages
 associated with this scale.}
-    \item{\code{palette}}{A palette function that when called with a single integer
-argument (the number of levels in the scale) returns the values that
-they should take (e.g., \code{\link[scales:hue_pal]{scales::hue_pal()}}).}
     \item{\code{name}}{The name of the scale. Used as the axis or legend title. If
 \code{waiver()}, the default, the name of the scale is taken from the first
 mapping used for that aesthetic. If \code{NULL}, the legend title will be

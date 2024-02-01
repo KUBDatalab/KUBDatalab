@@ -7,7 +7,7 @@
 stat_mode(x)
 }
 \arguments{
-\item{param}{1}
+\item{x}{den vektor hvor vi vil have typetallet}
 }
 \description{
 stat_mode returns the mode (most common value) in a vector
