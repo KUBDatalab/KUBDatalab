@@ -32,7 +32,7 @@
 #'      theme_kubdatalab()
 #' @rdname theme_kubdatalab
 #' @seealso [ggplot2::theme]
-#' @importFrom ggplot2 theme element_text element_rect element_blank element_line
+#' @importFrom ggplot2 ggplot theme element_text element_rect element_blank element_line
 #' theme_minimal
 #' @importFrom grid unit
 #' @export
@@ -48,15 +48,15 @@ theme_kubdatalab <- function(
   axis.text.size = 10,
   legend.title.size = 10,
   legend.text.size = 9,
-  title.color = "#901a1E",
-  subtitle.color = "#c73028",
-  text.color = "#901a1E",
+  title.color = "#000000",
+  subtitle.color = "#000000",
+  text.color = "#000000",
   axis.title.color = "#000000",
-  axis.text.color = "black",
-  panel.grid.major.color = "black",
+  axis.text.color = "#000000",
+  panel.grid.major.color = "#000000",
   panel.grid.minor.color = "grey",
   legend.title.color = "#000000",
-  legend.text.color = "#ffffff",
+  legend.text.color = "#000000",
   legend.position = "bottom",
   ticks = FALSE){
   kub_datalab <- ggplot2::theme_minimal() +
@@ -75,8 +75,8 @@ theme_kubdatalab <- function(
           legend.text = element_text(family = legend.font, size = legend.text.size, color = legend.text.color),
           legend.title = element_text(family = legend.font, size = legend.title.size, color = legend.title.color),
           legend.position = legend.position,
-          legend.key = element_rect(colour = "black", linetype = "solid", size = 1.25),
-          legend.background = element_rect(color = "black", fill = "white", linetype = "solid")
+          legend.key = element_rect(colour = "#000000", linetype = "solid", size = 1.25),
+          legend.background = element_rect(color = "#000000", fill = "white", linetype = "solid")
     )
 
   if (ticks == FALSE) {
